@@ -44,13 +44,17 @@ public class PetController {
 
     // get method:-to find pet to the store
     public PetPojoResponse findPet(Pet pet) {
-        return given(requestSpecification).pathParam("petId", pet.getId()).get(PET_ENDPOINT + "/{petId}").as(PetPojoResponse.class);
+        return given(requestSpecification).pathParam("petId", pet.getId()).get(PET_ENDPOINT
+                + "/{petId}").as(PetPojoResponse.class);
     }
 
     //  delete method:-to delete pet from the store
     public Response deletePet(Pet pet) {
-        return given(requestSpecification).pathParam("petId", pet.getId()).delete(PET_ENDPOINT);
+        return given(requestSpecification).pathParam("petId", pet.getId()).delete(PET_ENDPOINT
+                + "/{petId}");
     }
+
+
 
 
 }

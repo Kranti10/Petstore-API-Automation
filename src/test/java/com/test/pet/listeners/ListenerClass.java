@@ -12,9 +12,6 @@ import org.testng.ITestResult;
 public class ListenerClass implements ITestListener{
 	
 	private static String TestcaseName;
-
-	
-
 	public static String getTestcaseName() {
 		return TestcaseName;
 	}
